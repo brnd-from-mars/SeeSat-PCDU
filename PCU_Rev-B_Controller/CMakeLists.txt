@@ -14,4 +14,8 @@ project(PCU_Rev-B_Controller C)
 
 avr_generate_fixed_targets()
 
-avr_add_executable(PCU_Rev-B_Controller main.c i2c/i2c.c mp28167a/mp28167a.c)
+avr_add_executable(PCU_Rev-B_Controller main.c
+        i2c/i2c.c
+        mp28167a/mp28167a.c
+        uart/uart.c
+)

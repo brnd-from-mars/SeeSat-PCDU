@@ -32,5 +32,4 @@ void mp28167a_set_go_bit(struct MP28167A* device);
 void mp28167a_set_pg_delay_en(struct MP28167A* device, bool pg_delay_en);
 
 
-
 #endif //PCU_REV_B_CONTROLLER_MP28167A_H

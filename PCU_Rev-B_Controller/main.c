@@ -11,6 +11,7 @@
 #include <stdbool.h>
 
 #include "mp28167a/mp28167a.h"
+#include "uart/uart.h"
 
 
 int main(void)
@@ -19,7 +20,9 @@ int main(void)
 
     struct MP28167A mp28167a;
 
-    uint16_t i = 400;
+    uint16_t vref = 1244;
+
+    uart_init();
 
     while (true)
     {
@@ -27,11 +30,9 @@ int main(void)
         if(mp28167a.valid)
         {
             PORTB |= (1<<PORTB0);
-            mp28167a_set_vref(&mp28167a, i);
-            mp28167a_set_go_bit(&mp28167a);
 
-            ++i;
-            if (i == 1500) i = 400;
+            mp28167a_set_vref(&mp28167a, vref);
+            mp28167a_set_go_bit(&mp28167a);
         }
         else
         {
