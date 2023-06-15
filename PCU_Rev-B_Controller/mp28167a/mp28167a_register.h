@@ -1,6 +1,10 @@
-//
-// Created by Brendan Berg on 05.06.23.
-//
+/*
+ * project: PCU_Rev-B_Controller
+ * author: Brendan Berg
+ * date: 2023-05-28
+ *
+ * Copyright: (c) SeeSat e.V. 2023
+ */
 
 #ifndef PCU_REV_B_CONTROLLER_MP28167A_REGISTER_H
 #define PCU_REV_B_CONTROLLER_MP28167A_REGISTER_H
