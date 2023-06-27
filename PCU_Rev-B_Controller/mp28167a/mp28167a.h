@@ -29,6 +29,8 @@ void mp28167a_set_vref(struct MP28167A* device, uint16_t vref);
 
 void mp28167a_set_go_bit(struct MP28167A* device);
 
+void mp28167a_wait_go_bit_release(struct MP28167A* device);
+
 void mp28167a_set_pg_delay_en(struct MP28167A* device, bool pg_delay_en);
 
 

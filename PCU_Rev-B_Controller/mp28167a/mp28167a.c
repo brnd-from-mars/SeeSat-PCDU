@@ -53,6 +53,18 @@ void mp28167a_set_go_bit(struct MP28167A* device)
     i2c_stop_xfer();
 }
 
+void mp28167a_wait_go_bit_release(struct MP28167A* device)
+{
+    if (!device->valid) return;
+
+    uint8_t data = 0x01;
+
+    while (data & 0x01)
+    {
+        i2c_reg_burst_read(&data, DEVICE_ADDR, REG_VREF_GO, REG_VREF_GO);
+    }
+}
+
 
 void mp28167a_set_pg_delay_en(struct MP28167A* device, bool pg_delay_en)
 {
