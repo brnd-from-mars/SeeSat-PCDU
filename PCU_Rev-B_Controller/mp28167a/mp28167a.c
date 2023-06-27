@@ -38,7 +38,7 @@ void mp28167a_set_vref(struct MP28167A* device, uint16_t vref)
     i2c_send_sla_w(DEVICE_ADDR);
     i2c_send_byte(REG_VREF_L);
     i2c_send_byte(vref & 0x07);
-    i2c_send_byte(vref >> 3);
+    i2c_send_byte(vref>>3);
     i2c_stop_xfer();
 }
 

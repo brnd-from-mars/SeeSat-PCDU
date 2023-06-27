@@ -21,7 +21,9 @@ struct ADS72828
 
 };
 
-int ads7828_init(struct ADS72828* device);
+void ads7828_init(struct ADS72828 *device);
+
+uint16_t ads7828_read_channel(struct ADS72828 *device, uint8_t channel);
 
 
 #endif //PCU_REV_B_CONTROLLER_ADS7828_H
